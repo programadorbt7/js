@@ -24,10 +24,12 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 container__informaciones">
-                <img src="./img/trophy.png" alt="Icono de trofeo" />
-                <div class="container__texto">
-                    <h1><span class="container__texto-azul">Correcto!</span></h1>
-                    <h2>Descubriste el número secreto!</h2>
+                <div class="container__texto" id="playzone">
+                    <div class="contenedorRegistro">
+                        <label>Ingresa un nombre:</label>
+                        <input type="text" value="" id="nombreJugador" name="nombreJugador" placeholder="Usuario X">
+                        <button class="btnRegistrarUser" onclick="asignarNombreJugador();">Registrar</button>
+                    </div>
                 </div>
             </div>
         </div>

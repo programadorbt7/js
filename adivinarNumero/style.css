@@ -27,7 +27,7 @@ body::before {
     opacity: 0.4;
 }
 
-.section-cuerpo{
+.section-cuerpo {
     margin-top: 120px;
     height: 500px;
 }
@@ -50,6 +50,7 @@ body::before {
     align-items: center;
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 .container__informaciones {
@@ -70,9 +71,11 @@ body::before {
 
 .container__texto {
     margin: 16px 0 16px 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.container__texto-azul {
+.tituloPrincipal {
     color: #18e82a;
 }
 
@@ -92,20 +95,90 @@ h2 {
     font-weight: 400;
 }
 
-@media(max-width:1199px){.contenedor-imagen img{height: 500px;}}
-
-@media(max-width:991px){
-    .contenedor-imagen img{height: 400px;}
-    .section-cuerpo{height: 400px;}
+.contenedor-imagen img {
+    height: 400px;
 }
 
-@media(max-width:767px){
-    .section-cuerpo{height: 600px;}
-    .contenedor-imagen, .container__informaciones{display: flex; justify-content: center; text-align: center;}
-    .container__informaciones img{display: none;}
+@media(max-width:1199px) {
+    .contenedor-imagen img {
+        height: 500px;
+    }
 }
 
-@media(max-width:400px){
-    .contenedor-imagen img{width: 250px; height: 250px; object-fit: contain;}
-    .section-cuerpo{height: 450px;}
+@media(max-width:991px) {
+    .contenedor-imagen img {
+        height: 400px;
+    }
+
+    .section-cuerpo {
+        height: 400px;
+    }
+}
+
+@media(max-width:767px) {
+    .section-cuerpo {
+        height: 600px;
+    }
+
+    .contenedor-imagen,
+    .container__informaciones {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container__informaciones img {
+        display: none;
+    }
+}
+
+@media(max-width:400px) {
+    .contenedor-imagen img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .section-cuerpo {
+        height: 450px;
+    }
+}
+
+.contenedorRegistro {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorRegistro input {
+    color: black;
+    padding-left: 5px;
+}
+
+.contenedorRegistro .btnRegistrarUser {
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid #18e82a;
+    width: 200px;
+    margin-top: 20px;
+    padding: 5px 0;
+}
+
+.contenedorRegistro .btnRegistrarUser:hover {
+    border: 2px solid white;
+    transition: 0.4s ease-in-out;
+}
+
+.startGame {
+    background: none;
+    border: 2px solid white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.errorUsername {
+    margin-top: 13px;
+    color: red;
+    font-size: 13px;
 }
